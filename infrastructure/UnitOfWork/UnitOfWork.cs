@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.Data;
-using Infraestructura.Repositories;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.Repositories;
+using infrastructure.Data;
 
-namespace Infraestructura.UnitOfWork
+namespace infrastructure.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {

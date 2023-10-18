@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace APINOTI.Controllers;
+namespace api.Controllers;
 
 [ApiController]
 [Route("[Controller]")]

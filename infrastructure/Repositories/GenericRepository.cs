@@ -4,11 +4,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Core.Entities;
-using Infraestructura.Data;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infraestructura.Repositories
+namespace infrastructure.Repositories
 {
     public class GenericRepository<T> where T : BaseEntity
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Entities;
+using core.Entities;
 
-namespace APINOTI.Dtos
+namespace api.Dtos
 {
     public class RadicadosDto
     {

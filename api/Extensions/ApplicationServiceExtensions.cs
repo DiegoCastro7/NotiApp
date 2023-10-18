@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRateLimit;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 
-namespace APINOTI.Extensions
+namespace api.Extensions
 {
     public static class ApplicationServiceExtensions
     {

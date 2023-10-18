@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Core.Entities;
+using core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infraestructura.Data
+namespace infrastructure.Data
 {
     public class NotiAppContext : DbContext
     {

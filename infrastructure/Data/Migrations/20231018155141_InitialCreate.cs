@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Infraestructura.Data.Migrations
+namespace infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InicialCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,8 +24,8 @@ namespace Infraestructura.Data.Migrations
                     NombreUsuario = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DesAccion = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,8 +41,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreEstado = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,8 +58,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreFormato = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -75,8 +75,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreTipo = table.Column<string>(type: "varchar(80)", maxLength: 80, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,8 +92,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreModulo = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -109,8 +109,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombrePermiso = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,8 +124,8 @@ namespace Infraestructura.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -158,8 +158,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreSubmodulo = table.Column<string>(type: "varchar(80)", maxLength: 80, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -175,8 +175,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreTipo = table.Column<string>(type: "varchar(80)", maxLength: 80, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -192,8 +192,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nombre = table.Column<string>(type: "varchar(80)", maxLength: 80, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -209,8 +209,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdRolFk = table.Column<int>(type: "int", nullable: false),
                     IdMaestros = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -238,8 +238,8 @@ namespace Infraestructura.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdMaestro = table.Column<int>(type: "int", nullable: false),
                     IdSubModulo = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -270,8 +270,8 @@ namespace Infraestructura.Data.Migrations
                     IdAuditoriaFk = table.Column<int>(type: "int", nullable: false),
                     IdHiloRespuestaFk = table.Column<int>(type: "int", nullable: false),
                     IdNotificacionFk = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -313,8 +313,8 @@ namespace Infraestructura.Data.Migrations
                     IdHiloRespuestaFk = table.Column<int>(type: "int", nullable: false),
                     IdFormatoFk = table.Column<int>(type: "int", nullable: false),
                     IdRequerimiento = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -367,8 +367,8 @@ namespace Infraestructura.Data.Migrations
                     IdPermisosFk = table.Column<int>(type: "int", nullable: false),
                     IdRolFk = table.Column<int>(type: "int", nullable: false),
                     IdSubModulos = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    FechaModificacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    FechaCreacion = table.Column<DateTime>(type: "DateTime", nullable: false),
+                    FechaModificacion = table.Column<DateTime>(type: "DateTime", nullable: false)
                 },
                 constraints: table =>
                 {

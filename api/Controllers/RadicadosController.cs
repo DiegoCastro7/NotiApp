@@ -1,11 +1,11 @@
-using APINOTI.Dtos;
+using api.Dtos;
 using AutoMapper;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APINOTI.Controllers
+namespace api.Controllers
 {
     public class RadicadosController : BaseController
     {
@@ -54,6 +54,7 @@ namespace APINOTI.Controllers
             if (radicados == null){
                 return BadRequest();
             }
+            RadicadosDto.Id = radicados.Id;
             var dato = CreatedAtAction(nameof(Post), new {id = RadicadosDto.Id}, RadicadosDto);
             var retorno2 = await _UnitOfWork.Radicados.GetIdAsync(RadicadosDto.Id);
             return _mapper.Map<RadicadosDto>(retorno2);

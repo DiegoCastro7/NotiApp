@@ -1,11 +1,11 @@
-using APINOTI.Dtos;
+using api.Dtos;
 using AutoMapper;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APINOTI.Controllers
+namespace api.Controllers
 {
     public class SubModuloController : BaseController
     {
@@ -54,6 +54,7 @@ namespace APINOTI.Controllers
             if (submodulos == null){
                 return BadRequest();
             }
+            SubmodulosDto.Id = submodulos.Id;
             var dato = CreatedAtAction(nameof(Post), new {id = SubmodulosDto.Id}, SubmodulosDto);
             var retorno2 = await _UnitOfWork.SubModulos.GetIdAsync(SubmodulosDto.Id);
             return _mapper.Map<SubmodulosDto>(retorno2);

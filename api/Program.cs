@@ -1,6 +1,6 @@
 using System.Reflection;
-using APINOTI.Extensions;
-using Infraestructura.Data;
+using api.Extensions;
+using infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

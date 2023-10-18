@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace core.Entities
 {
     public class ModuloNoficaciones : BaseEntity
     {
         public string AsuntoNotificacion { get; set; }
         public string TextoNotificacion { get; set; }
 
-        //FORANEAS
         public TipoNotificaciones TipoNotificacion { get; set; }
         public int IdNotificacionFk { get; set; }
 

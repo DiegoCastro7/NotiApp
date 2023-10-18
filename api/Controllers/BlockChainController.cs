@@ -1,11 +1,11 @@
-using APINOTI.Dtos;
+using api.Dtos;
 using AutoMapper;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APINOTI.Controllers
+namespace api.Controllers
 {
     public class BlockChainController : BaseController
     {
@@ -54,6 +54,7 @@ namespace APINOTI.Controllers
             if (blockChain == null){
                 return BadRequest();
             }
+            blockChainDto.Id = blockChain.Id;
             var dato = CreatedAtAction(nameof(Post), new {id = blockChainDto.Id}, blockChainDto);
             var retorno = await _UnitOfWork.BlockChains.GetIdAsync(blockChain.Id);
             return _mapper.Map<BlockChainDto>(retorno);

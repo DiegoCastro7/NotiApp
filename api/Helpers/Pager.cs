@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace APINOTI.Helpers
+namespace api.Helpers
 {
     public class Pager<T> where T : class
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Core.Entities;
+using core.Entities;
 
-namespace Core.Interfaces
+namespace core.Interfaces
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {

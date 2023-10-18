@@ -1,11 +1,11 @@
-using APINOTI.Dtos;
+using api.Dtos;
 using AutoMapper;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APINOTI.Controllers
+namespace api.Controllers
 {
     public class EstadoNotiController : BaseController
     {
@@ -54,6 +54,7 @@ namespace APINOTI.Controllers
             if (EstadoNoti == null){
                 return BadRequest();
             }
+            estadoNotiDto.Id = EstadoNoti.Id;
             var dato = CreatedAtAction(nameof(Post), new {id = estadoNotiDto.Id}, estadoNotiDto);
             var retorno = _UnitOfWork.EstadoNotificaciones.GetIdAsync(estadoNotiDto.Id);
             return _mapper.Map<EstadoNotiDto>(EstadoNoti);

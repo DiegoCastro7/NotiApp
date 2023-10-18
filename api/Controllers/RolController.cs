@@ -1,11 +1,11 @@
-using APINOTI.Dtos;
+using api.Dtos;
 using AutoMapper;
-using Core.Entities;
-using Core.Interfaces;
-using Infraestructura.UnitOfWork;
+using core.Entities;
+using core.Interfaces;
+using infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APINOTI.Controllers
+namespace api.Controllers
 {
     public class RolController : BaseController
     {
@@ -54,6 +54,7 @@ namespace APINOTI.Controllers
             if (roles == null){
                 return BadRequest();
             }
+            RolDto.Id = roles.Id;
             var dato = CreatedAtAction(nameof(Post), new {id = RolDto.Id}, RolDto);
             var retorno2 = await _UnitOfWork.Roles.GetIdAsync(RolDto.Id);
             return _mapper.Map<RolDto>(retorno2);

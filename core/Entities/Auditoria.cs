@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace core.Entities
 {
     public class Auditoria : BaseEntity
     {
